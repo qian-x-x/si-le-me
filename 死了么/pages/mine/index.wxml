@@ -1,0 +1,76 @@
+<view class="gradient-bg">
+  <view class="gradient-blob blob-1"></view>
+  <view class="gradient-blob blob-2"></view>
+</view>
+
+<view class="page-container">
+  <view class="custom-nav">
+    <view class="nav-title">我的</view>
+  </view>
+
+  <view class="content">
+    <!-- 用户信息 -->
+    <view class="user-section">
+      <image class="user-avatar" src="{{avatar}}" mode="aspectFill" />
+      <view class="user-info">
+        <view class="username">{{username}}</view>
+        <view class="uid">UID: {{uid}}</view>
+      </view>
+    </view>
+
+    <!-- 签到统计 -->
+    <view class="card stats-card">
+      <view class="stats-title">签到统计</view>
+      <view class="stats-row">
+        <view class="stat-item">
+          <text class="stat-value">{{totalDays}}</text>
+          <text class="stat-label">累计签到</text>
+        </view>
+        <view class="stat-item">
+          <text class="stat-value">{{consecutiveDays}}</text>
+          <text class="stat-label">连续签到</text>
+        </view>
+        <view class="stat-item">
+          <text class="stat-value">{{longestStreak}}</text>
+          <text class="stat-label">最长连续</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 功能菜单 -->
+    <view class="card menu-card">
+      <view class="menu-item" bindtap="goEmergencyContact">
+        <view class="menu-left">
+          <t-icon name="user" size="40rpx" />
+          <text>紧急联系人</text>
+        </view>
+        <view class="menu-right">
+          <text class="menu-value" wx:if="{{emergencyContact}}">{{emergencyContact.name}}</text>
+          <text class="menu-placeholder" wx:else>未设置</text>
+          <t-icon name="chevron-right" size="32rpx" color="#999" />
+        </view>
+      </view>
+
+      <view class="menu-divider"></view>
+
+      <view class="menu-item" bindtap="goSignInHistory">
+        <view class="menu-left">
+          <t-icon name="time" size="40rpx" />
+          <text>签到历史</text>
+        </view>
+        <view class="menu-right">
+          <text class="menu-count">{{signInHistory.length}}条</text>
+          <t-icon name="chevron-right" size="32rpx" color="#999" />
+        </view>
+      </view>
+    </view>
+
+    <!-- 提醒说明 -->
+    <view class="card notice-card">
+      <view class="notice-title">安全提醒</view>
+      <view class="notice-content">
+        超过2天未签到时，系统将自动通过短信和邮件通知您的紧急联系人。请及时设置紧急联系人并保持每日签到。
+      </view>
+    </view>
+  </view>
+</view>

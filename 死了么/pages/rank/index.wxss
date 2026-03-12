@@ -1,0 +1,155 @@
+.page-container {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  background-color: #ffffff;
+  padding-bottom: 180rpx;
+}
+
+.content {
+  padding-top: 20rpx;
+}
+
+/* 今日签到统计 */
+.stats-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48rpx 32rpx;
+}
+
+.stats-title {
+  font-size: 28rpx;
+  color: #666666;
+  margin-bottom: 16rpx;
+}
+
+.stats-num {
+  font-size: 80rpx;
+  font-weight: 700;
+  color: #000000;
+}
+
+.stats-desc {
+  font-size: 24rpx;
+  color: #999999;
+  margin-top: 8rpx;
+}
+
+/* 榜单标题 */
+.rank-header {
+  padding: 32rpx 40rpx 16rpx;
+}
+
+.rank-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #000000;
+  display: block;
+}
+
+.rank-subtitle {
+  font-size: 24rpx;
+  color: #666666;
+  margin-top: 8rpx;
+  display: block;
+}
+
+/* 排行榜列表 */
+.rank-list {
+  padding: 0 32rpx;
+}
+
+.rank-item {
+  display: flex;
+  align-items: center;
+  padding: 24rpx;
+  background: #ffffff;
+  border-radius: 16rpx;
+  margin-bottom: 16rpx;
+  border: 1rpx solid #e5e5e5;
+}
+
+.rank-item.current-user {
+  background: #000000;
+  border-color: #000000;
+}
+
+.rank-item.current-user .rank-name,
+.rank-item.current-user .rank-days {
+  color: #ffffff;
+}
+
+.rank-num {
+  width: 60rpx;
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #666666;
+  text-align: center;
+}
+
+.rank-num.top-1 {
+  color: #ffd700;
+}
+
+.rank-num.top-2 {
+  color: #c0c0c0;
+}
+
+.rank-num.top-3 {
+  color: #cd7f32;
+}
+
+.rank-avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin: 0 24rpx;
+}
+
+.rank-info {
+  flex: 1;
+}
+
+.rank-name {
+  font-size: 30rpx;
+  font-weight: 500;
+  color: #000000;
+}
+
+.rank-days {
+  font-size: 24rpx;
+  color: #666666;
+  margin-top: 4rpx;
+}
+
+.rank-badge {
+  color: #ffd700;
+}
+
+/* 当前用户排名 */
+.current-rank-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40rpx 32rpx;
+  margin: 32rpx;
+}
+
+.current-rank-title {
+  font-size: 28rpx;
+  color: #666666;
+  margin-bottom: 12rpx;
+}
+
+.current-rank-num {
+  font-size: 48rpx;
+  font-weight: 700;
+  color: #000000;
+}
+
+.current-rank-tips {
+  font-size: 24rpx;
+  color: #999999;
+  margin-top: 12rpx;
+}

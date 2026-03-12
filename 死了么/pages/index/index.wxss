@@ -1,0 +1,161 @@
+.page-container {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  background-color: #ffffff;
+  padding-bottom: 180rpx;
+}
+
+.content {
+  padding-top: 20rpx;
+}
+
+/* 状态展示区 */
+.status-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60rpx 32rpx;
+}
+
+.status-icon {
+  color: #34c759;
+  margin-bottom: 24rpx;
+}
+
+.status-icon.warning {
+  color: #ff3b30;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.status-text {
+  font-size: 48rpx;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 16rpx;
+}
+
+.status-desc {
+  font-size: 28rpx;
+  color: #ff3b30;
+  text-align: center;
+  padding: 0 40rpx;
+}
+
+/* 签到卡片 */
+.signin-card {
+  padding: 40rpx 32rpx;
+}
+
+.signin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40rpx;
+}
+
+.signin-title {
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #000000;
+}
+
+.signin-subtitle {
+  font-size: 26rpx;
+  color: #666666;
+}
+
+.signin-btn-area {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 48rpx;
+}
+
+.signin-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16rpx;
+  width: 100%;
+  height: 120rpx;
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 16rpx;
+  font-size: 36rpx;
+  font-weight: 600;
+  border: none;
+}
+
+.signin-btn:active {
+  background-color: #333333;
+}
+
+.signin-btn.disabled {
+  background-color: #cccccc;
+  color: #666666;
+}
+
+/* 统计行 */
+.stats-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 32rpx;
+  border-top: 1rpx solid #e5e5e5;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.stat-value {
+  font-size: 48rpx;
+  font-weight: 700;
+  color: #000000;
+}
+
+.stat-value.warning {
+  color: #ff3b30;
+}
+
+.stat-label {
+  font-size: 24rpx;
+  color: #666666;
+  margin-top: 8rpx;
+}
+
+.stat-divider {
+  width: 1rpx;
+  height: 60rpx;
+  background-color: #e5e5e5;
+}
+
+/* 提醒说明 */
+.notice-card {
+  padding: 32rpx;
+}
+
+.notice-title {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 20rpx;
+}
+
+.notice-item {
+  font-size: 26rpx;
+  color: #666666;
+  line-height: 1.8;
+}

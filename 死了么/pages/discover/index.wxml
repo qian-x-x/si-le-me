@@ -1,0 +1,32 @@
+<view class="map-container">
+  <map
+    id="communityMap"
+    class="map-view"
+    latitude="{{latitude}}"
+    longitude="{{longitude}}"
+    scale="{{scale}}"
+    markers="{{markers}}"
+    bindmarkertap="onTapMarker"
+    show-location
+  ></map>
+
+  <!-- 右侧悬浮信息面板 -->
+  <view class="right-panel">
+    <view class="panel-title">社区动态</view>
+    <view class="panel-stats">
+      <view class="panel-stat">
+        <text class="panel-num">{{nearbyCount}}</text>
+        <text class="panel-label">周围用户</text>
+      </view>
+      <view class="panel-stat">
+        <text class="panel-num success">{{signedCount}}</text>
+        <text class="panel-label">今天存活</text>
+      </view>
+      <view class="panel-stat">
+        <text class="panel-num danger">{{unsignedCount}}</text>
+        <text class="panel-label">不知去向</text>
+      </view>
+    </view>
+    <view class="panel-tips">模拟数据，仅供演示</view>
+  </view>
+</view>

@@ -1,0 +1,27 @@
+<t-navbar title="编辑资料" left-arrow />
+
+<view class="container">
+  <!-- 头像 -->
+  <view class="form-card avatar-section" bindtap="chooseAvatar">
+    <text class="label">头像</text>
+    <view class="avatar-right">
+      <image class="avatar" src="{{avatar}}" mode="aspectFill" />
+      <text class="arrow">›</text>
+    </view>
+  </view>
+
+  <!-- 表单 -->
+  <view class="form-card form-section">
+    <view class="form-item">
+      <text class="label">昵称</text>
+      <input class="input" placeholder="请输入昵称" value="{{nickname}}" bindinput="onNicknameInput" />
+    </view>
+    <view class="form-item">
+      <text class="label">简介</text>
+      <input class="input" placeholder="请输入简介" value="{{bio}}" bindinput="onBioInput" />
+    </view>
+  </view>
+
+  <!-- 保存按钮 -->
+  <view class="save-btn" bindtap="saveProfile">保存</view>
+</view>

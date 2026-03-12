@@ -1,0 +1,67 @@
+<view class="gradient-bg">
+  <view class="gradient-blob blob-1"></view>
+  <view class="gradient-blob blob-2"></view>
+</view>
+
+<view class="page-container">
+  <view class="custom-nav">
+    <view class="nav-title">死了么Pro Max</view>
+  </view>
+
+  <view class="content">
+    <!-- 状态展示区 -->
+    <view class="status-section">
+      <view class="status-icon {{showWarning ? 'warning' : ''}}">
+        <t-icon name="{{showWarning ? 'warning' : 'check-circle'}}" size="120rpx" />
+      </view>
+      <view class="status-text">{{showWarning ? '危险警告' : '我还活着'}}</view>
+      <view class="status-desc" wx:if="{{showWarning}}">
+        您已超过2天未签到，紧急联系人将收到提醒
+      </view>
+    </view>
+
+    <!-- 签到卡片 -->
+    <view class="card signin-card">
+      <view class="signin-header">
+        <text class="signin-title">每日签到</text>
+        <text class="signin-subtitle">上次签到: {{lastSignInText}}</text>
+      </view>
+
+      <view class="signin-btn-area">
+        <button
+          class="signin-btn {{canSignIn ? '' : 'disabled'}}"
+          bindtap="doSignIn"
+          disabled="{{!canSignIn}}"
+        >
+          <t-icon name="check" size="40rpx" />
+          <text>{{canSignIn ? '立即签到' : '今日已签到'}}</text>
+        </button>
+      </view>
+
+      <view class="stats-row">
+        <view class="stat-item">
+          <text class="stat-value">{{consecutiveDays}}</text>
+          <text class="stat-label">连续存活天数</text>
+        </view>
+        <view class="stat-divider"></view>
+        <view class="stat-item">
+          <text class="stat-value {{daysSinceSignIn >= 2 ? 'warning' : ''}}">{{daysSinceSignIn}}</text>
+          <text class="stat-label">未签到天数</text>
+        </view>
+        <view class="stat-divider"></view>
+        <view class="stat-item">
+          <text class="stat-value">{{totalDays}}</text>
+          <text class="stat-label">累计签到</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 提醒说明 -->
+    <view class="card notice-card">
+      <view class="notice-title">签到提醒说明</view>
+      <view class="notice-item">- 每日签到可报平安</view>
+      <view class="notice-item">- 超过2天未签到，系统将提醒您的紧急联系人</view>
+      <view class="notice-item">- 连续签到可获得成就</view>
+    </view>
+  </view>
+</view>

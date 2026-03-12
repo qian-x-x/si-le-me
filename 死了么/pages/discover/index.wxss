@@ -1,0 +1,72 @@
+.map-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.map-view {
+  width: 100%;
+  height: 100%;
+}
+
+/* 右侧悬浮信息面板 */
+.right-panel {
+  position: absolute;
+  top: 180rpx;
+  right: 24rpx;
+  width: 240rpx;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12rpx);
+  border-radius: 20rpx;
+  padding: 24rpx;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.12);
+}
+
+.panel-title {
+  font-size: 26rpx;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 20rpx;
+  text-align: center;
+}
+
+.panel-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 16rpx;
+}
+
+.panel-stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8rpx 0;
+}
+
+.panel-num {
+  font-size: 32rpx;
+  font-weight: 700;
+  color: #000000;
+}
+
+.panel-num.success {
+  color: #34c759;
+}
+
+.panel-num.danger {
+  color: #ff3b30;
+}
+
+.panel-label {
+  font-size: 22rpx;
+  color: #666666;
+}
+
+.panel-tips {
+  font-size: 20rpx;
+  color: #999999;
+  text-align: center;
+  margin-top: 16rpx;
+  padding-top: 16rpx;
+  border-top: 1rpx solid #e5e5e5;
+}

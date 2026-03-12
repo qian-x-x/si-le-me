@@ -1,0 +1,9 @@
+<t-navbar title="关于我们" left-arrow />
+
+<view class="container">
+  <image class="logo" src="/static/image/logo.jpg" mode="aspectFit" />
+  <text class="app-name">编程两年半</text>
+  <text class="version">版本 1.0.0</text>
+  <view class="divider"></view>
+  <text class="desc">抖音：编程两年半</text>
+</view>

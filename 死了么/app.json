@@ -1,0 +1,59 @@
+{
+  "lazyCodeLoading": "requiredComponents",
+  "pages": [
+    "pages/index/index",
+    "pages/discover/index",
+    "pages/rank/index",
+    "pages/mine/index"
+  ],
+  "subPackages": [
+    {
+      "root": "subpkg",
+      "pages": [
+        "about/index",
+        "profile/index",
+        "emergency/index"
+      ]
+    }
+  ],
+  "window": {
+    "navigationBarTitleText": "死了么Pro Max",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#ffffff",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#999999",
+    "selectedColor": "#000000",
+    "backgroundColor": "#f5f5f5",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/discover/index",
+        "text": "地图"
+      },
+      {
+        "pagePath": "pages/rank/index",
+        "text": "排行"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "我的"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "用于展示您周围的活跃用户"
+    }
+  },
+  "requiredPrivateInfos": [
+    "getLocation"
+  ],
+  "sitemapLocation": "sitemap.json"
+}

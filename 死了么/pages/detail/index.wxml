@@ -1,0 +1,24 @@
+<t-navbar title="详情" left-arrow />
+
+<view class="container">
+  <!-- 封面图 -->
+  <image class="cover-image" src="{{detail.image}}" mode="aspectFill" />
+
+  <!-- 内容信息 -->
+  <view class="detail-card info-card">
+    <view class="info-title">{{detail.title}}</view>
+    <view class="info-desc">{{detail.desc}}</view>
+    <view class="info-meta">
+      <text class="meta-item">发布时间：2026-01-12</text>
+    </view>
+  </view>
+
+  <!-- 详细内容 -->
+  <view class="detail-card content-card">
+    <view class="content-text">
+      这是示例内容的详细描述，可以在这里展示更多的信息。
+      
+      内容可以包含多段文字，图片等丰富的展示形式。
+    </view>
+  </view>
+</view>

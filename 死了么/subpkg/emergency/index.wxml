@@ -1,0 +1,61 @@
+<view class="page-container">
+  <view class="custom-nav">
+    <view class="nav-back" bindtap="goBack">
+      <t-icon name="chevron-left" size="48rpx" />
+    </view>
+    <view class="nav-title">紧急联系人</view>
+  </view>
+
+  <view class="content">
+    <view class="card form-card">
+      <view class="form-title">设置紧急联系人</view>
+      <view class="form-desc">超过2天未签到时，系统将通知您的紧急联系人</view>
+
+      <view class="form-item">
+        <view class="form-label">姓名</view>
+        <input
+          class="form-input"
+          placeholder="请输入联系人姓名"
+          value="{{name}}"
+          bindinput="onNameInput"
+        />
+      </view>
+
+      <view class="form-item">
+        <view class="form-label">手机号</view>
+        <input
+          class="form-input"
+          type="number"
+          maxlength="11"
+          placeholder="请输入联系人手机号"
+          value="{{phone}}"
+          bindinput="onPhoneInput"
+        />
+      </view>
+
+      <view class="form-item">
+        <view class="form-label">邮箱（选填）</view>
+        <input
+          class="form-input"
+          type="text"
+          placeholder="请输入联系人邮箱"
+          value="{{email}}"
+          bindinput="onEmailInput"
+        />
+      </view>
+    </view>
+
+    <view class="save-btn-area">
+      <button class="save-btn" bindtap="saveEmergencyContact">
+        保存
+      </button>
+    </view>
+
+    <view class="card notice-card">
+      <view class="notice-title">温馨提示</view>
+      <view class="notice-item">1. 请确保紧急联系人知晓您的行程</view>
+      <view class="notice-item">2. 超过2天未签到将自动发送提醒</view>
+      <view class="notice-item">3. 请定期更新联系信息</view>
+    </view>
+  </view>
+</view>

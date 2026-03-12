@@ -1,0 +1,58 @@
+<view class="gradient-bg">
+  <view class="gradient-blob blob-1"></view>
+  <view class="gradient-blob blob-2"></view>
+</view>
+
+<view class="page-container">
+  <view class="custom-nav">
+    <view class="nav-title">排行榜</view>
+  </view>
+
+  <view class="content">
+    <!-- 今日签到统计 -->
+    <view class="card stats-card">
+      <view class="stats-title">今日签到人数</view>
+      <view class="stats-num">{{todaySignInCount}}</view>
+      <view class="stats-desc">实时更新</view>
+    </view>
+
+    <!-- 榜单标题 -->
+    <view class="rank-header">
+      <text class="rank-title">连续签到排行</text>
+      <text class="rank-subtitle">统计连续签到天数</text>
+    </view>
+
+    <!-- 排行榜列表 -->
+    <view class="rank-list">
+      <view
+        class="rank-item {{item.isCurrentUser ? 'current-user' : ''}}"
+        wx:for="{{rankList}}"
+        wx:key="id"
+      >
+        <view class="rank-num {{index < 3 ? 'top-' + (index + 1) : ''}}">
+          {{index + 1}}
+        </view>
+        <image class="rank-avatar" src="{{item.avatar}}" mode="aspectFill" />
+        <view class="rank-info">
+          <view class="rank-name">{{item.name}}</view>
+          <view class="rank-days">{{item.consecutiveDays}}天</view>
+        </view>
+        <view class="rank-badge" wx:if="{{index < 3}}">
+          <t-icon name="{{index === 0 ? 'trophy' : 'medal'}}" size="32rpx" />
+        </view>
+      </view>
+    </view>
+
+    <!-- 当前用户排名 -->
+    <view class="card current-rank-card" wx:if="{{currentUserRank && currentUserRank !== '未上榜'}}">
+      <view class="current-rank-title">您的排名</view>
+      <view class="current-rank-num">第{{currentUserRank}}名</view>
+      <view class="current-rank-tips">再接再厉，明天争取上榜</view>
+    </view>
+    <view class="card current-rank-card" wx:else>
+      <view class="current-rank-title">您的排名</view>
+      <view class="current-rank-num">未上榜</view>
+      <view class="current-rank-tips">签到即可参与排行</view>
+    </view>
+  </view>
+</view>
