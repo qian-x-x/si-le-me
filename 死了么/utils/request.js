@@ -1,7 +1,7 @@
 /**
  * 网络请求封装
  */
-const BASE_URL = 'http://localhost:3000'
+const BASE_URL = 'http://10.66.46.139:3000'
 
 /**
  * 获取token

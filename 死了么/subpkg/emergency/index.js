@@ -11,6 +11,10 @@ Page({
     this.loadEmergencyContact()
   },
 
+  goBack() {
+    wx.navigateBack()
+  },
+
   loadEmergencyContact() {
     wx.showLoading({ title: '加载中...' })
 

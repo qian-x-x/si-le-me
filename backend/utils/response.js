@@ -159,9 +159,12 @@ const logResponse = (req, statusCode, message, data) => {
 const success = (res, data = null, message = '操作成功', statusCode = ResponseCode.SUCCESS) => {
   // 记录响应日志
   logResponse(res.req, statusCode, message, data);
-  
+
+  // 业务状态码：0表示成功，非0表示错误
+  const businessCode = statusCode >= 400 ? statusCode : 0;
+
   return res.status(statusCode).json({
-    code: statusCode,
+    code: businessCode,
     message,
     data: processResponseData(data),
     timestamp: formatDate(new Date())
